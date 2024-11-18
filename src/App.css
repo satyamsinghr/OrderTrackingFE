@@ -1,38 +1,305 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+* {
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: "Roboto Flex", sans-serif;
+    overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+    text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
-.App-link {
-  color: #61dafb;
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #D6D5D5;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #49454F;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #D6D5D5;
+}
+
+/*===== login page =======*/
+.header {
+    position: absolute;
+    top: 16px;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.login {
+    /* background-image: url(../images/appBg.png); */
+    background-image: url(../src/assets/appBg.png);
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 40px 0;
+}
+
+.FormCard {
+    border-radius: 32px;
+    border: 1px solid #CAE6FF;
+    background: rgba(16, 20, 23, 0.50);
+    backdrop-filter: blur(4px);
+    /* padding: 40px; */
+    width: 100%;
+}
+
+.FormCard h2 {
+    color: #FFF;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-family: "Hanken Grotesk", sans-serif;
+    margin: 0;
+    line-height: 32px;
+}
+
+.Seprator {
+    background: #B2F2FF;
+    width: 32px;
+    height: 1px;
+    margin: 32px auto;
+}
+
+input.form-control {
+    border-radius: 4px;
+    border: 1px solid #899294;
+    background: transparent;
+    height: 56px;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: #BFC8CA;
+    outline: none;
+    box-shadow: none;
+}
+
+input.form-control:hover,
+input.form-control:active,
+input.form-control:focus {
+    border-radius: 4px;
+    border: 1px solid #65558F;
+    background: transparent;
+    height: 56px;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: #BFC8CA;
+    outline: none;
+    box-shadow: none;
+}
+
+label.form-label {
+    color: #BFC8CA;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    background: #101417;
+    padding: 0 4px;
+    position: absolute;
+    left: 12px;
+    top: -8px;
+}
+
+input.form-control:hover~.form-label,
+input.form-control:active~.form-label,
+input.form-control:focus~.form-label {
+    color: #65558F;
+}
+
+input.form-control::placeholder {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: #BFC8CA;
+}
+
+button.btn.btn-primary {
+    border-radius: 4px;
+    background: #96CDF8;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    padding: 10px 10px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    text-align: center;
+    color: #00344F;
+}
+
+button.btn.btn-primary:hover,
+button.btn.btn-primary:active,
+button.btn.btn-primary:focus {
+    border-radius: 4px;
+    background: #96CDF8;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.30), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+}
+
+button.btn.btn-trasnparent {
+    color: #96CDF8;
+    padding: 10px 10px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    text-align: center;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+button.btn.btn-trasnparent:hover,
+button.btn.btn-trasnparent:active,
+button.btn.btn-trasnparent:focus {
+    color: #96CDF8;
+    text-align: center;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background: rgba(101, 85, 143, 0.08);
+    border-radius: 40px;
+}
+
+/*=== search ====*/
+.SearchCard {
+    border-radius: 32px;
+    background: #0B0F12;
+    box-shadow: 0px 96px 32px 0px rgba(0, 0, 0, 0.50);
+}
+
+.searchCardContent h3 {
+    color: #CAE6FF;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    font-family: "Hanken Grotesk", sans-serif;
+}
+
+.searchCardContent input,
+.searchCardContent input:hover,
+.searchCardContent input:active,
+.searchCardContent input:focus {
+    border-radius: 16px;
+    background: #262A2E;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: #F3FCFE;
+}
+
+button.searchButton {
+    border-radius: 16px;
+    background: #9AD1FC;
+    box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px 0px rgba(0, 0, 0, 0.30);
+    height: 56px;
+    width: 56px;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+}
+
+.userInfo {
+    border-radius: 100px;
+    background: #384956;
+    padding: 10px 24px 10px 16px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    color: #D3E5F5;
+    cursor: pointer;
+}
+
+.LogOut {
+    padding: 10px 16px 10px 12px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    color: #96CDF8;
+    cursor: pointer;
+    border-radius: 100px;
+}
+
+.LogOut:hover {
+
+    background: rgba(101, 85, 143, 0.08);
+}
+
+@media (max-width:960px) {
+    .Seprator {
+        margin: 16px auto;
+    }
+}
+
+@media (max-width:767px) {
+    .header {
+        top: 0px;
+    }
+}
+
+@media (max-width:520px) {
+    .searchCardContent h3 {
+        color: #CAE6FF;
+        font-size: 17px;
+    }
 }
