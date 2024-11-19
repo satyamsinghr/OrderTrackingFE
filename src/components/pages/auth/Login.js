@@ -56,11 +56,11 @@ const Login = () => {
                       >
                         Log In
                       </button>
-                      {/* <button
+                      <button type='button'
                         className="btn btn-trasnparent mt-2 w-100"
                       >
                         Log In
-                      </button> */}
+                      </button>
                     </div>
                   </form>
                 </div>

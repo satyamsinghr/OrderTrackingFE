@@ -9,7 +9,7 @@ body {
     padding: 0;
     position: relative;
     font-family: "Roboto Flex", sans-serif;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 a {
@@ -55,13 +55,12 @@ li {
 }
 
 .login {
-    /* background-image: url(../images/appBg.png); */
     background-image: url(../src/assets/appBg.png);
     min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding: 40px 0;
+    padding: 102px 0 40px 0;
 }
 
 .FormCard {
@@ -285,6 +284,109 @@ button.searchButton {
     background: rgba(101, 85, 143, 0.08);
 }
 
+.summaryTitle h6 {
+    color: #E0E3E8;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+}
+
+.orderSummary li {
+    color: #E0E3E8;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+}
+
+.orderSummary li .summaryDetailTitle {
+    min-width: 105px;
+}
+
+.SummaryColumn:not(:last-child) {
+    border-right: 1px solid #3F484A;
+    padding-right: 48px;
+    margin-right: 48px;
+}
+
+.progressCard {
+    border-radius: 24px;
+    background: #181C20;
+}
+
+.progressCard.uncomplete {
+    border-radius: 24px;
+    background: #313539;
+}
+
+.progressCard h6 {
+    color: #E0E3E8;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+}
+
+.progressCard ul li {
+    color: #BFC8CA;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+}
+
+.progressCard button {
+    padding: 6px 16px 6px 8px;
+    border-radius: 8px;
+    background-color: #181C20;
+    border: none;
+    box-shadow: none;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    color: #BFC8CA;
+    margin: auto;
+}
+
+.progressCard {
+    border-radius: 24px;
+    background: #181C20;
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 143px;
+}
+
+@media (max-width:999px) {
+
+    .SummaryColumn:not(:last-child) {
+        border-right: 0px solid #3F484A;
+        padding-right: 0px;
+        margin-right: 0px;
+        margin-bottom: 30px;
+    }
+
+    .progressCard {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 42%;
+    }
+
+    .progressArrow {
+        flex: 0 0 auto;
+        width: 4%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 @media (max-width:960px) {
     .Seprator {
         margin: 16px auto;
@@ -295,11 +397,36 @@ button.searchButton {
     .header {
         top: 0px;
     }
+
+    .login {
+        padding: 72px 0 40px 0;
+    }
+
+    .progressCard {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 41%;
+    }
 }
 
 @media (max-width:520px) {
     .searchCardContent h3 {
         color: #CAE6FF;
         font-size: 17px;
+    }
+
+
+    .progressCard {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .progressArrow svg {
+        transform: rotate(90deg);
+    }
+
+    .progressArrow {
+        width: 100%;
     }
 }
